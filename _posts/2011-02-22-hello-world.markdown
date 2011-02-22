@@ -3,6 +3,6 @@ layout: default
 title: Hello World
 ---
 
-{% highlight objective-c %}
+{% highlight objectivec %}
 @class HelloWorld
 {% endhighlight %}
