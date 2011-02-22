@@ -65,11 +65,32 @@ ul.posts {
   ul.posts li {
     line-height: 1.75em;
   }
+  
+  ul.posts li div {
+    vertical-align: top;
+  }
 
-  ul.posts span {
+  ul.posts li div span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
+  }
+  
+  ul.posts li .first {
+    width: 8em;
+    vertical-align:middle;
+    display: inline-block;
+  }
+  
+  ul.posts li .sep {
+    width: 0.75em;
+    vertical-align:middle;
+    display: inline-block;
+  }
+  
+  ul.posts li .second {
+    width: 30.5em;
+    display: inline-block;
   }
 
 /*****************************************************************************/
@@ -138,10 +159,6 @@ ul.posts {
       float: right;
     }
 
-      .site .footer .rss img {
-        border: 0;
-      }
-
 /*****************************************************************************/
 /*
 /* Posts
@@ -149,26 +166,26 @@ ul.posts {
 /*****************************************************************************/
 
 #post {
-
+  word-break: break-all;
 }
 
   /* standard */
 
   #post pre {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     background-color: #eef;
     padding: 0 .4em;
   }
 
   #post ul,
   #post ol {
-    margin-left: 1.25em;
+    margin-left: 1.35em;
   }
 
   #post code {
     border: 1px solid #ddd;
     background-color: #eef;
-    font-size: 95%;
+    font-size: 85%;
     padding: 0 .2em;
   }
 
@@ -195,3 +212,185 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+  
+img.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/********************************
+*
+*  COMMENTS
+*
+********************************/
+
+
+.comment {
+    background-color: transparent;
+    border-color: #CACACA;
+    border-style: solid;
+    border-width: 1px;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px;
+    width: 100%;
+  }
+  
+.comment .commentheader {
+  border-bottom-color: #CACACA;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: black;
+  background-image: url(https://assets2.github.com/images/modules/comments/metabar.gif);
+  color: black;
+  display: block;
+  float: left;
+  font-family: helvetica, arial, freesans, clean, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 33px;
+  line-height: 33px;
+  margin: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px;
+  text-overflow: ellipsis;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+  
+.comment .commentheader .commentgravatar {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: white;
+  background-image: none;
+  background-origin: padding-box;
+  border-color: #C8C8C8;
+  border-style: solid;
+  border-width: 1px;
+  color: black;
+  display: inline-block;
+  float: none;
+  font-family: helvetica, arial, freesans, clean, sans-serif;
+  font-size: 1px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 20px;
+  line-height: 1px;
+  margin-left: 5px;
+  margin-right: 3px;
+  margin-top: -2px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 1px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 20px;
+}
+  
+.comment .commentheader a:link {
+  text-decoration: none;
+}
+
+.comment .commentheader a:hover {
+  border-bottom:1px solid;
+}
+  
+  
+.comment .commentheader .commentuser {
+  background-color: transparent;
+  color: black;
+  display: inline;
+  float: none;
+  font-family: helvetica, arial, freesans, clean, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  height: 0px;
+  line-height: 16px;
+  margin-left: 5px;
+  margin-right: 10px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 0px;
+}
+  
+.comment .commentheader .commentdate {
+  background-color: transparent;
+  color: #777;
+  display: inline;
+  float: none;
+  font-family: helvetica, arial, freesans, clean, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 0px;
+  line-height: 33px;
+  margin: 0px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0px;
+  text-overflow: clip;
+  text-shadow: rgba(255, 255, 255, 0.699219) 1px 1px 0px;
+  white-space: nowrap;
+  width: 20em;
+}
+  
+.comment .commentbody {
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: none;
+  background-origin: padding-box;
+  color: #333;
+  display: block;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 40px;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0em;
+  position: static;
+  width: 96%;
+  word-break: break-all;
+}
+  
+.comment .commentbody p {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+
+.comment .commentbody pre {
+  border: 0px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+}
+
+.comment .commentbody pre code {
+  border: 0px solid #ddd;
+}
+
+.comment .commentbody code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  font-size: 85%;
+  padding: 0 .2em;
+}

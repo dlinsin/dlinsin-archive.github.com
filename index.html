@@ -3,8 +3,52 @@ layout: default
 title: David Linsin
 ---
 
-Welcome!
 
-{% for post in site.posts limit:5 %}
-<h2><em>{{ post.date | date_to_long_string }}: </em><a href="{{ post.url }}">{{ post.title }}</a></h2>
-{% endfor %}
+
+<div id="home">
+  <a name="about"></a>
+  <h1>about</h1>
+  <ul class="posts">
+    <li>
+      <div class="first"><span>me</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second">I am a versatile developer with an eye for perfection. I started my career as a Java developer and now pursuing my current passion iOS development.</div>
+    </li>
+    <li>
+      <div class="first"><span>my passion</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second">Together with my wife I co-founded <a href="http://furryfishApps.com">furryfishApps</a>, a small independent iOS App shop. We create addictive games and stunning Apps. Our latest App <a href="http://furryfishApps.com/wordbuzz">Word Buzz</a> is available on the <a href="http://itunes.apple.com/app/word-buzz-hd/id388372038?mt=8">App Store</a>.</div>
+    </li>
+    <li>
+      <div class="first"><span>my job</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second">My day job is developing iOS Apps at <a href="http://grandcentrix.net">GrandCentrix</a> in Cologne.</div>
+    </li>
+  </ul>
+  
+  <a name="blog"></a>
+  <h1>blog</h1>
+  <ul class="posts">
+    
+    {% for post in site.posts limit:5 %}
+    
+    <li>
+      <div class="first"><span>{{ post.date | date: "%d %b %Y" }}</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    </li>
+    
+    {% endfor %}
+    
+  </ul>
+  
+  <a name="projects"></a>
+  <h1>projects</h1>
+  <ul class="posts">
+    <li>
+      <div class="first"><span><a href="http://github.com/dlinsin/DLStarRating">DLStarRating</a></span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second">A UIControl subclass similar to the App Store rating control.</div>
+    </li>
+  </ul>
+  
