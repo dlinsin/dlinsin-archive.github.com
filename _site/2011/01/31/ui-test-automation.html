@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html>
+<head>
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+  <title>David Linsin - UI Test Automation with Instruments</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="David Linsin" />
+  <link href="http://dlinsin.github.com/atom.xml" rel="alternate" title="UI Test Automation with Instruments" type="application/atom+xml" />
+</head>
+
+<body>
+
+<a href="http://github.com/dlinsin"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://assets2.github.com/img/5d21241b64dc708fcbb701f68f72f41e9f1fadd6?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_left_red_aa0000.png&path=" alt="Fork me on GitHub"></a>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Home</a>
+  </div>
+  
+  <link rel="me" type="text/html" href="http://www.google.com/profiles/dlinsin"/>
+  
+  <div id="post">
+  <h1> UI Test Automation with Instruments </h1>
+  <p class="meta"> 22 February 2011 </p> 
+  
+<p>One of the most impressive talks for me at <a href='http://dlinsin.blogspot.com/2010/06/wwdc10.html'>WWDC 2010</a> was session 306 - &#8220;Automating Use Interface Testing with Instruments&#8221;. I&#8217;ve been wanting to check it out ever since iOS 4 was released. A couple of weeks ago, I finally had a chance to give it a test ride with <a href='http://mobile.synyx.de/2010/09/i-think-i-spider-1-0-released/'>"I think I spider"</a>, one of the Apps I developed.</p>
+
+<p>All you need to get started is an App, Instruments and some basic JavaScript skills. Apple provides a set of <a href='http://developer.apple.com/library/ios/#documentation/ToolsLanguages/Reference/UIATargetClassReference/UIATargetClass/UIATargetClass.html'>JavaScript libraries</a>, that you can use to drive your tests and simulate user interaction. Your custom test scripts are run using the Automation Instrument in Apple&#8217;s Instruments App, targeting your App either in the Simulator or on an actual device.</p>
+
+<p>You can test almost every aspect of user interaction, using Apple&#8217;s JavaScript library. No matter if you want to test shaking, device orientation or the basics like tapping and swiping, you can do all that using basic JavaScript function calls. Apple&#8217;s <a href='https://developer.apple.com/library/mac/#documentation/DeveloperTools/Conceptual/InstrumentsUserGuide/Built-InInstruments/Built-InInstruments.html%23//apple_ref/doc/uid/TP40004652-CH6-SW75'>documentation</a> is quite solid, as most of them are, and explains the process in detail.</p>
+
+<p>For &#8220;I think I spider&#8221; I covered the basic use cases in terms of UI, to make sure it still works after adding new features. Here is a basic example of the JavaScript involved to test &#8220;opening&#8221; the book, after starting the App:</p>
+<div class='highlight'><pre><code class='javascript'><span class='c1'>// setup</span>
+<span class='kd'>var</span> <span class='nx'>target</span> <span class='o'>=</span> <span class='nx'>UIATarget</span><span class='p'>.</span><span class='nx'>localTarget</span><span class='p'>();</span>
+<span class='kd'>var</span> <span class='nx'>appWindow</span> <span class='o'>=</span> <span class='nx'>target</span><span class='p'>.</span><span class='nx'>frontMostApp</span><span class='p'>().</span><span class='nx'>mainWindow</span><span class='p'>();</span>
+<span class='kd'>var</span> <span class='nx'>element</span> <span class='o'>=</span> <span class='nx'>target</span><span class='p'>;</span>
+
+<span class='c1'>// first test</span>
+<span class='kd'>var</span> <span class='nx'>testName</span> <span class='o'>=</span> <span class='s2'>&quot;Start Screen Test&quot;</span><span class='p'>;</span>
+<span class='nx'>UIALogger</span><span class='p'>.</span><span class='nx'>logStart</span><span class='p'>(</span><span class='nx'>testName</span><span class='p'>);</span>
+<span class='nx'>UIALogger</span><span class='p'>.</span><span class='nx'>logMessage</span><span class='p'>(</span><span class='s2'>&quot;Tapping start screen&quot;</span><span class='p'>);</span>
+<span class='nx'>appWindow</span><span class='p'>.</span><span class='nx'>elements</span><span class='p'>()[</span><span class='s2'>&quot;start_screen&quot;</span><span class='p'>].</span><span class='nx'>tap</span><span class='p'>();</span> 
+
+<span class='c1'>// open the book</span>
+<span class='k'>if</span> <span class='p'>(</span><span class='nx'>appWindow</span><span class='p'>.</span><span class='nx'>elements</span><span class='p'>()[</span><span class='s2'>&quot;main_screen&quot;</span><span class='p'>].</span><span class='nx'>isValid</span><span class='p'>())</span> <span class='p'>{</span>
+  <span class='nx'>UIALogger</span><span class='p'>.</span><span class='nx'>logFail</span><span class='p'>(</span><span class='nx'>testName</span><span class='p'>);</span>
+<span class='p'>}</span> <span class='k'>else</span> <span class='p'>{</span>
+  <span class='nx'>UIALogger</span><span class='p'>.</span><span class='nx'>logPass</span><span class='p'>(</span><span class='nx'>testName</span><span class='p'>);</span>
+<span class='p'>}</span>
+</code></pre>
+</div><a href='https://gist.github.com/803902' class='gist'>gist</a>
+<p>You can see that the JavaScript API is quite easy to use and yet very powerful! After setting this up in the Automation Instrument and running it, you can see the Simulator firing up and tapping the <em>UIImageView</em> with the accessibility label &#8220;startscreen&#8221; after it became available. It then tests, if the main screen of the App was loaded and either passes or fails the test.</p>
+
+<p>In order to make our App testable, I had to set the accessibility labels on the elements we wanted to reference from the script. That was the only change I had to make in our code. Since you should take accessibility into consideration anyways, it was a reasonable effort.</p>
+
+<p>Apple did an awesome job giving us developers the ability to catch regressions and make our life easier. However, there is room for improvement, which has been nicely <a href='http://blog.airsource.co.uk/index.php/2010/08/13/ui-automation-on-the-iphone/'>summarized</a> by <a href='http://www.airsource.co.uk'>Air Source</a>. For us, a missing <em>UIALogger.warn</em> function in the JavaScript library was the biggest downside. Sometimes it&#8217;s okay for a test to fail under certain conditions, but you still want to get a warning about it. I use <em>UIALogger.logMessage</em> for those cases as a workaround, but it&#8217;s quite easy to miss those lines, since they don&#8217;t stand out.</p>
+
+<p>Overall, I think it&#8217;s a huge improvement to have a UI testing tool for iOS Apps at hand. There is room for improvement, but the current state of UI Test Automation is already priceless!</p>
+
+  </div>
+
+  <div class="footer">
+    <div class="contact">
+      <p>
+        mail: dlinsin@gmail.com<br/>
+        jabber: dlinsin@gmail.com<br/>
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        skype: dlinsin<br/>
+        twitter: furryfishApps
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        github: dlinsin<br/>
+      </p>
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>
