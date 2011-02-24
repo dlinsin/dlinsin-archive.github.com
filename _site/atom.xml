@@ -4,7 +4,7 @@
  <title>David Linsin</title>
  <link href="http://dlinsin.github.com/atom.xml" rel="self"/>
  <link href="http://dlinsin.github.com/"/>
- <updated>2011-02-23T09:05:51+01:00</updated>
+ <updated>2011-02-24T08:10:27+01:00</updated>
  <id>http://dlinsin.github.com/</id>
  <author>
    <name>David Linsin</name>
@@ -14,12 +14,16 @@
  
  <entry>
    <title>Hello World</title>
-   <link href="http://dlinsin.github.com/2011/02/22/hello-world.html"/>
-   <updated>2011-02-22T00:00:00+01:00</updated>
-   <id>http://dlinsin.github.com/2011/02/22/hello-world</id>
-   <content type="html">&lt;p&gt;&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='objectivec'&gt;&lt;span class='k'&gt;@class&lt;/span&gt; &lt;span class='nc'&gt;HelloWorld&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;/p&gt;</content>
+   <link href="http://dlinsin.github.com/2011/03/01/hello-world.html"/>
+   <updated>2011-03-01T00:00:00+01:00</updated>
+   <id>http://dlinsin.github.com/2011/03/01/hello-world</id>
+   <content type="html">&lt;p&gt;When developers are talking about &lt;a href='http://en.wikipedia.org/wiki/Hello_world_program' title='Wikipedia on Hello World'&gt;&amp;#8220;Hello World&amp;#8221;&lt;/a&gt;, they usually talk about their first steps in a new programming language. When I say &amp;#8220;Hello World&amp;#8221; today, I am talking about my first steps in mobile development.&lt;/p&gt;
+
+&lt;p&gt;If you are reading this, you are probably aware of my &lt;a href='http://furryfishApps.com/wordbuzz' title='furryfishApps - Word Buzz'&gt;other mobile endavours&lt;/a&gt; and might be asking yourself right now: why &amp;#8220;Hello World&amp;#8221;? Why first steps? Well, today is my first day of iOS-only and full time mobile development at &lt;a href='http://grandcentrix.net' title='GrandCentrix GmbH'&gt;GrandCentrix GmbH&lt;/a&gt; in Cologne.&lt;/p&gt;
+
+&lt;p&gt;GrandCentrix is your full service provider for mobile solutions. We provide ready to use mobile marketing, productivity and customer-service Apps for various platforms and industries.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m really excited about this change! My spare time passion for iOS development turns into my day job, which means I can put a 120% of my efforts and concentration into building awesome Apps.&lt;/p&gt;</content>
  </entry>
  
  <entry>
