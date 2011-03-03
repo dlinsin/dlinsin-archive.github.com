@@ -219,6 +219,7 @@ img.aligncenter {
 
 #post p {
   word-break: normal;
+  text-align: left;
 }
 
 /********************************
