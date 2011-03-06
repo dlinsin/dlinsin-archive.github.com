@@ -21,7 +21,7 @@ All those little details were the requirements for the next version of the ratin
 
 It's quite easy to use *DLStarRating* in your code. You can wire it up in Interface Builder (although you won't be able to configure it from there) or in your *UIViewController* subclass:
 
-{% highlight javascript %}
+{% highlight objectivec %}
 DLStarRatingControl *customNumberOfStars = 
   [[DLStarRatingControl alloc] initWithFrame:CGRectMake(0, 230, 320, 230) andStars:3];
 customNumberOfStars.backgroundColor = [UIColor groupTableViewBackgroundColor];
