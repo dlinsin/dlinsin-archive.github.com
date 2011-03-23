@@ -1,0 +1,75 @@
+---
+layout: post
+title: ATMHud
+---
+
+I recently started using [ATMHud](https://github.com/atomton/ATMHud "ATMHud on github"), a great iOS library to indicate activity and short notifications in an App via HUDs. I want to give you a little overview of how ATMHud can look like and how it is used in your code. 
+
+Most of the samples can be found in the [DemoViewController](https://github.com/atomton/ATMHud/blob/master/Classes/DemoViewController.m "DemoViewController on github"), which comes along with the code. However, I think it gives you a better understanding of what it's like to use ATMHud, if they are highlighted here. Let's dive right into it:
+
+{% highlight objectivec %}
+#import "ATMHud.h"
+hud = [[ATMHud alloc] initWithDelegate:self];
+[self.view addSubview:hud.view];
+[hud setCaption:@"Please wait..."];
+[hud setActivity:YES];
+[hud show];
+{% endhighlight %}
+<a class="gist" href="https://gist.github.com/882722">gist</a>
+
+This is one of the simplest samples to display a ATMHud in your code. You simply instantiate and add it to the view the HUD is supposed to be displayed on top of. The API to configure the style is as simple as calling a method to set the message and enable an activity. This is how it looks like:
+
+![Simple HUD](/images/2011-03-24-simple.png "Simple HUD")
+
+The next sample is a little bit more sophisticated, but shows the power of ATMHud. 
+
+{% highlight objectivec %}
+#import "ATMHud.h"
+hud = [[ATMHud alloc] initWithDelegate:self];
+[self.view addSubview:hud.view];
+[hud setCaption:@"Successfully saved"];
+[hud setImage:[UIImage imageNamed:@"19-check"]];
+[hud show];
+[hud hideAfter:2.0];
+{% endhighlight %}
+<a class="gist" href="https://gist.github.com/882723">gist</a>
+
+This HUD consist of a message, just like the previous sample. In addition to that, an image is set, which is automatically displayed below the configured message. The really neat thing here is that the HUD is automatically dimissed after two seconds. This way you can display little flash notifications, which can help users to better understand your App. This is what it looks like:
+
+![HUD with image](/images/2011-03-24-advanced.png "HUD with image")
+
+The next sample is a tad bit more complicated, but also a lot more powerful. Imagine you want to let your user know that his task is being processed at the moment. As soon as the work is complete, you want to notifiy him again. In ATMHud you can do just that using *ATMHudQueueItems*:
+
+{% highlight objectivec %}
+#import "ATMHud.h"
+#import "ATMHudQueueItem.h"
+hud = [[ATMHud alloc] initWithDelegate:self];
+[self.view addSubview:hud.view];
+
+ATMHudQueueItem *item = [[ATMHudQueueItem alloc] init];
+item.caption = @"Saving...";
+item.showActivity = YES;
+[hud addQueueItem:item];
+[item release];
+
+item = [[ATMHudQueueItem alloc] init];
+item.caption = @"Successfully saved";
+item.showActivity = NO;
+item.image = [UIImage imageNamed:@"19-check"];
+[hud addQueueItem:item];
+[item release];
+
+[hud startQueue];
+
+// after a while
+
+[hud showNextInQueue];
+{% endhighlight %}
+<a class="gist" href="https://gist.github.com/882725">gist</a>
+
+![Queue of HUDs - 1st](/images/2011-03-24-queue1.png "Queue of HUDs - 1st")
+![Queue of HUDs - 2nd](/images/2011-03-24-queue2.png "Queue of HUDs - 2nd")
+
+It's quite easy to understand how this works and you can see how powerful this concept is. We setup *ATMHudQueueItem* instances, which can be configured with the same options as a simple *ATMHud* instance. You can set an image, sound and acitivty indicator. You add those queue items to the *ATMHud* instance and start it at some point. As soon as the first step of your process is done, you can show the next HUD in the queue.
+
+There's much more to [ATMHud](https://github.com/atomton/ATMHud "ATMHud on github") as highlighted here. For example you can add a sound to your HUD, there's a way to display beautiful progress bars or you can configure the position of the activity indicator. If you need a better way to notify the users of your App, you should really have a look at ATMHud by [atomcraft](http://www.atomcraft.de/ "atomcraft iOS development").
