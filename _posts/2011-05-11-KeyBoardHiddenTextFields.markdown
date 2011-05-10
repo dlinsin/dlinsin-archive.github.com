@@ -16,4 +16,4 @@ In almost every iOS app I developed so far I came across the situation where mul
 
 When you look at Michael's [code on github](https://github.com/michaeltyson/TPKeyboardAvoiding) you can see, that he went along to creat a set of custom base classes handling those three steps, that Apple suggest to do. I suggest to go, check it out and use it if you can!
 
-In case you cannot use it or don't want to, I created a small sample project for myself to understand what Apple is suggesting. You can find it [on github](http://github.com/dlinsin/district9/KeyBoardHidden/). Almost all the code is from the Apple's documentation. It's the bare minimum without any animation or fancy schmancy design, but I believe it gives you an idea of how to apply it to your code. 
+In case you cannot use it or don't want to, I created a small sample project for myself to understand what Apple is suggesting. You can find it [on github](https://github.com/dlinsin/district9/tree/master/KeyBoardHidden). Almost all the code is from the Apple's documentation. It's the bare minimum without any animation or fancy schmancy design, but I believe it gives you an idea of how to apply it to your code. 
