@@ -1,0 +1,30 @@
+---
+layout: post
+title: iOS 3.x is Dead
+---
+
+
+In my last post on [iOS App Lifecycle and UILocalNotifications](http://dlinsin.github.com/2011/05/18/iOSLifecycleAndUILocalNotifications.html), I wrote about how you can check whether your App is running or has just started from a *UILocalNotification*: 
+
+{% highlight objectivec %}
+- (void)application:(UIApplication *)application didReceiveLocalNotification:
+                                        (UILocalNotification *)notification {
+    if(application.applicationState == UIApplicationStateActive ) { 
+        DBLog(@"Received: %@", notification.alertBody);
+        // alert, because app is running in foreground
+    }
+}
+{% endhighlight %}
+<a class="gist" href="https://gist.github.com/978155">gist</a>
+
+Well, as it turns out this solution only works with iOS 4.0, since *UIApplication.applicationState* is not available on iOS 3.x. I only found this bug yesterday, after our latest App [Cologne Train](http://goo.gl/lP9RM) was smoothly approved by Apple and is targeted for iOS 3.1.3 (the oldest we have running here). 
+
+Now, don't get me wrong! I'm not writing this to criticise the review process for not catching my bug, although it was an obvious one. It's a bug that every static analyzer or API versioning tool could have catched, if it was out to looked for it. 
+
+If Apple wanted to catch bugs, that only occurs on iOS 3.x, I bet they could!
+
+This is nothing new, I wrote about this [before](http://dlinsin.blogspot.com/2010/12/why-word-buzz-doesn-support-ios-31.html) and so did [others](http://www.marco.org/2011/03/24/ios-device-and-os-version-stats-from-instapaper-3-0). However it's worth mentioning it again: the percentage of devices out there running iOS 3.x is tiny. I guess Apple thinks the same way and focuses on other things during review instead.  
+
+I believe with the [latest numbers](http://twitter.com/#!/marcoarment/status/74600722783666176) and Apple not catching such obvious iOS 3.x related issues, it's save to say: **iOS 3.x is dead**!
+
+ 
