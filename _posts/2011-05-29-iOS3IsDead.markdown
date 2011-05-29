@@ -19,7 +19,7 @@ In my last post on [iOS App Lifecycle and UILocalNotifications](http://dlinsin.g
 
 Well, as it turns out this solution only works with iOS 4.0, since *UIApplication.applicationState* is not available on iOS 3.x. I only found this bug yesterday, after our latest App [Cologne Train](http://goo.gl/lP9RM) was smoothly approved by Apple and is targeted for iOS 3.1.3 (the oldest we have running here). 
 
-Now, don't get me wrong! I'm not writing this to criticise the review process for not catching my bug, although it was an obvious one. It's a bug that every static analyzer or API versioning tool could have catched, if it was out to looked for it. 
+Now, don't get me wrong! I'm not writing this to criticise the review process for not catching my bug, although it was an obvious one. It's a bug that every static analyzer or API versioning tool could have caught, if it was out to looked for it. 
 
 If Apple wanted to catch bugs, that only occurs on iOS 3.x, I bet they could!
 
