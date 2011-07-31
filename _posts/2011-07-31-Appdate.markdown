@@ -1,0 +1,67 @@
+---
+layout: post
+title: Appdate
+---
+
+Our very own app dev shop [furryfishApps](http://furryfishapps.com) has been busy lately. 
+We've been working hard on an App called ["Cologne Train"] (http://itunes.apple.com/app/bahn-koln/id437791701?mt=8 "Köln Bahn"). As the name 
+indicates, it makes life easier commuting via local trains here in Cologne.
+
+In this blog post I'll tell you a little bit about the app and highlight a couple of things, which 
+I think are quite interesting. It's probably not going to get too technical and more informative.
+
+Cologne Train really servers our own needs. We commute almost daily and always ran into the problem 
+of arriving at the train station just to notice that the train is either delayed due to some disruption 
+or just left a couple if minutes ago. We wanted to know about disruptions and train departures before 
+we leave the house - that's when the Cologne Train App idea was born. It took about 19 days from 
+inception to 1.0, although I have only worked on the App a couple of hours everyday. 
+
+For our first feature - informing users about disruptions - we built a custom server backend. It 
+takes care of detecting disruptions and sending out Push Notifications. In our App users can 
+select which train lines they are interested in and "subscribe" to Push Notifications. It was one 
+of our design goals to make our App as non-invasive as possible. If you are only commuting on train 
+line 16, for example, you probably don't want to receive Push Notifications for any other lines 
+and thanks to our custom server backend, you won't receive any. 
+
+For Push Notifications we use [Urban Airship](http://urbanairship.com "Urban Airship"), which is awesome! 
+In case you've never heard of them: Urban Airship provides an infrastructure for Apple Push Notifications 
+(APN) as well as In-App Purchases. In plain English: they solve all those nitty-gritty details with Device 
+Tokens and APN. They also provide an easy to use [client library](https://github.com/dlinsin/ios-library "My fork"), 
+which handles device registration and badge updates with Urban Airship. It also helps to configure 
+"quiet times", another feature, which helps our App with non-invasiveness. 
+
+Although it's great to know about train disruptions, something was missing. We also wanted our App to 
+know when the next train would leave at our station. However, our App is not meant as a 
+timetable App, it's merely meant to save you a couple of minutes, when leaving the house. It'll show 
+you an estimate of how many minutes you've got until the train arrives at the station of your choice. 
+It updates live, meaning if the train takes longer that estimated, it'll adjust appropriately. 
+
+In order to implement this, we tap into the local train companies website, which fortunately, 
+offers a little html snippet, which you can add to your own website. It's easy and fast enough to 
+parse on the device and scales nicely up to a couple of dozen stations. 
+
+Due to the fact that Cologne doesn't have too many stations, we decided to offer a preloaded indexed 
+list, as opposed to an "only searching" feature. It was a design decision, which we believe, 
+makes the App feel rather concise and easy to use. There's still a search bar, however the fact that 
+users can instantly scroll through the list, makes the App feel even more nativ. 
+
+Unfortunately, there are situations when our App cannot display any information, e.g. due to a 
+downtime of the local train companies systems or a disruption of network service. However, if the 
+user just refreshed the content a couple of minutes ago, we think the information displayed is still 
+valid. So we decided to not discard the displayed disruptions or train times, but rather add a subtle 
+notification to indicate something went wrong. There are a lot of Apps replacing the content with an 
+error message, which we believe is simply a bad design decision. 
+
+Although our App looks quite simple, we pondered over little design decisions like the latter a lot! 
+We want our App to be as helpful and non-invasiv as possible, mostly because we also use it every day. 
+
+A couple of days ago version 2.1 was approved, which mainly fixes some bugs. However, we have a lot more 
+ideas to come, so stay tuned. Oh and [we love feedback](http://twitter.com/furryfishApps)!
+
+
+
+
+
+
+
+
