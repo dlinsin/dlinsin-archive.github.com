@@ -10,7 +10,7 @@ indicates, it makes life easier commuting via local trains here in Cologne.
 In this blog post I'll tell you a little bit about the app and highlight a couple of things, which 
 I think are quite interesting. It's probably not going to get too technical and more informative.
 
-Cologne Train really servers our own needs. We commute almost daily and always ran into the problem 
+Cologne Train really serves our own needs. We commute almost daily and always ran into the problem 
 of arriving at the train station just to notice that the train is either delayed due to some disruption 
 or just left a couple if minutes ago. We wanted to know about disruptions and train departures before 
 we leave the house - that's when the Cologne Train App idea was born. It took about 19 days from 
