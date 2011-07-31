@@ -12,12 +12,12 @@ I think are quite interesting. It's probably not going to get too technical and 
 
 Cologne Train really serves our own needs. We commute almost daily and always ran into the problem 
 of arriving at the train station just to notice that the train is either delayed due to some disruption 
-or just left a couple if minutes ago. We wanted to know about disruptions and train departures before 
+or just left a couple of minutes ago. We wanted to know about disruptions and train departures before 
 we leave the house - that's when the Cologne Train App idea was born. It took about 19 days from 
 inception to 1.0, although I have only worked on the App a couple of hours everyday. 
 
 For our first feature - informing users about disruptions - we built a custom server backend. It 
-takes care of detecting disruptions and sending out Push Notifications. In our App users can 
+takes care of detecting disruptions and sending out Push Notifications. In our App, users can 
 select which train lines they are interested in and "subscribe" to Push Notifications. It was one 
 of our design goals to make our App as non-invasive as possible. If you are only commuting on train 
 line 16, for example, you probably don't want to receive Push Notifications for any other lines 
@@ -43,7 +43,7 @@ parse on the device and scales nicely up to a couple of dozen stations.
 Due to the fact that Cologne doesn't have too many stations, we decided to offer a preloaded indexed 
 list, as opposed to an "only searching" feature. It was a design decision, which we believe, 
 makes the App feel rather concise and easy to use. There's still a search bar, however the fact that 
-users can instantly scroll through the list, makes the App feel even more nativ. 
+users can instantly scroll through the list, makes the App feel even more native. 
 
 Unfortunately, there are situations when our App cannot display any information, e.g. due to a 
 downtime of the local train companies systems or a disruption of network service. However, if the 
