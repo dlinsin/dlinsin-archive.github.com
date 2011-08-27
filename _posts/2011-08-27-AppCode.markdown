@@ -1,0 +1,40 @@
+---
+layout: post
+title: AppCode
+---
+
+I recently announced on [twitter](http://twitter.com/#!/furryfishApps/status/103699334406742016), that I'd be using [AppCode](http://www.jetbrains.com/objc/ "AppCode"), the Objective-C IDE from Jetbrains, in 
+production for at least one week. It's almost two weeks now, here's what I experienced.
+
+I'll get to the point quickly here: It's a pleasure to develop with AppCode! If you are looking for a 
+strong editor with solid refactoring support, go get AppCode's 1.0 and never use Xcode's editor 
+again. If you've used any other Jetbrains product, you'll feel at home instantly. Version Control 
+works out of the box and the debugging UI is a lot more stable than in Xcode. 
+
+If I haven't convinced you yet, keep on reading. 
+
+AppCode has great refactoring support. Out of the box, the most important refactorings are 
+assigned to keyboard shortcuts, you are accustomed to if you've used e.g. [IntelliJ](http://www.jetbrains.com/idea). However, the 
+biggest advantage over Xcode is the variety of refactorings: "Introduce Variable" or "Extract Block" 
+is something that Xcode doesn't offer you and I would already miss it.
+
+The stability of the EAP build is great, it's still buggy, but let's face it: you've probably seen Xcode's 
+"Crash or Continue" dialog [at least](http://twitter.com/bmf/status/106144603647909889) [once](http://twitter.com/chockenberry/status/106068158145765376) the past couple days - with a "stable" version. No matter 
+what went wrong the past week AppCode never crashed! You get a notification, indicating 
+something went wrong and a textfield to report a bug, which can be submitted directly from the 
+App. However, everything kept working - no restart required.
+
+Although AppCode is great, there are some problems, which I mostly blame on the fact it's still EAP.
+
+I wasn't able to debug my iOS Apps on any device, which basically is a no-go for production usage. 
+However, the iOS Simulator works fine, so I used Xcode for device debugging and AppCode for 
+development. In a stable version this must be fixed, though.
+
+I only needed Xcode for Interface Builder, to edit Core Data Models or archiving/submitting to the 
+App Store. Those things are not possible in AppCode and frankly, I don't think they'll ever be. 
+I could imagine, that editing Core Data Models might be included, however for the other two tasks 
+you'll need to fall back to Xcode. Personally, I don't mind switching between applications, however, 
+I can see that this might not appeal to everyone. 
+
+I'll continue using AppCode, even in production, since for me a strong editor is much more worth 
+than an integrated experience. However, I'm looking forward for AppCode's first stable version.
