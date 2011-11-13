@@ -9,8 +9,8 @@ URL shortener - [Git.io](https://github.com/blog/985-git-io-github-url-shortener
 
 Services like that always [inspire me](https://github.com/dlinsin/github-java-api) to build 
 stuff on top of them. It's just great to see companies you love come up with cool stuff to play with. 
-Sutini and I even had a brainstorming session over a nice cup of Starbucks coffee whether 
-this would be a project for [furryfishApps](http://furryfishApps.com). I wanted a simple way to 
+Sutini and I even had a brainstorming session over a nice cup of Starbucks coffee, whether 
+this could be a project for [furryfishApps](http://furryfishApps.com). I wanted a simple way to 
 generate Git.io URLs for pasting into E-Mails or Tweets. I could think of more features, 
 but that's the basic requirement. 
 
