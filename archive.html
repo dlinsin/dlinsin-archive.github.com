@@ -1,0 +1,23 @@
+---
+layout: static
+title: David Linsin - Archive
+---
+
+
+
+<div id="archive">
+  <ul class="posts">
+    
+    {% for post in site.posts%}
+    
+    <li>
+      <div class="first"><span>{{ post.date | date: "%d %b %Y" }}</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    </li>
+    
+    {% endfor %}
+    
+  </ul>
+  
+  

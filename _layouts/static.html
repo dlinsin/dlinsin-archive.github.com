@@ -4,8 +4,8 @@
 <head>
   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-  <link rel="icon" type="image/png" href="/browser.png"/>
-  <title>David Linsin - {{ page.title }}</title>
+  <link rel="icon" type="image/png" href="browser.png"/>
+  <title>{{ page.title }}</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="David Linsin" />
   <meta name="readability-verification" content="kbveNNU8CFHVGcfKUh9HFRJHL5fGZHZvLYQseLcE"/>
@@ -23,36 +23,7 @@
   
   <link rel="me" type="text/html" href="http://dlinsin.github.com"/>
   
-  <div id="post">
-  <h1> {{ page.title }} </h1>
-  <p class="meta"> {{ page.date | date_to_long_string }} </p> 
-  
 {{ content }}
-
-  </div>
-  
-  <br/>
-  <a name="related"></a>
-  <h1>// related posts</h1>
-  <ul class="posts">
-    
-    {% for post in site.related_posts limit:3 %}
-    
-    <li>
-      <div class="first"><span>{{ post.date | date: "%d %b %Y" }}</span></div>
-      <div class="sep"> &bull; </div>
-      <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
-    </li>
-    
-    {% endfor %}
-    
-    <li>
-      <div class="first"><span>more posts</span></div>
-      <div class="sep"> &bull; </div>
-      <div class="second"><a href="{{ site.url }}/archive.html">Archive</a></div>
-    </li>
-    
-  </ul>
 
   <div class="footer">
     <div class="contact">
