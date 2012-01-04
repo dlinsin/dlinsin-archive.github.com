@@ -20,3 +20,10 @@ The first screenshot obviously shows ratings of the [German App Store](http://it
 It think this is a conclusive example, that the App Store model in Germany is so much different from the one in the US! If you read the comments below the ratings, you can see, that customers in Germany are thinking twice about whether to spend 0.79€ on an App or not. 
 
 So what can you as a developer or small iOS shop do about this? Unfortunately, there isn't much you can do. Apple doesn't let you set different prices in each country. You are basically stuck with the workaround of submitting two different Apps with the same feature set to the App Store and limit its availability to certain countries. That way you can individually configure prices. However, that leaves you with maintain multiple Apps - nothing I would want to do. I'd rather live with the same price across different countries, until Apple comes up with a solution.
+
+__Update:__
+
+Seems like there was a [technical issue](https://twitter.com/#!/olebegemann/status/154583220246151168) 
+with the German version of Face Time, which basically renders the example for my case invalid. 
+However, I still think the mindset of customers in each country is different, although 
+I don't have any example to make a case.   
