@@ -6,7 +6,7 @@ title: Focus
 
 The latest update of ["Cologne Train"](http://ffapps.me/bahn) (aka "Bahn Köln"), 
 which hit the App Store a [couple of days ago](http://twitter.com/#!/furryfishApps/status/168091577032511488), 
-reflects [furryfishApps](http://furryfishApps.com) continuos effort of __narrowing the focus, while increasing the value__. 
+reflects [furryfishApps](http://furryfishApps.com) continuos effort of narrowing the focus, while increasing the value. 
 
 We believe that the focus of our App, even though it was already very narrow, was still too 
 wide and needed some redefinition. This is by the way quite opposed to what people tell us 
@@ -14,18 +14,18 @@ in their [App Store ratings](http://dlinsin.github.com/2011/11/20/AppStoreRating
 always want more bells & whistles and they all want it for free. So our decision to narrow the 
 focus of "Cologne Train" might seem contradicting. However, we believe it's the right step: 
 
-__The more narrow focused an App is, the better it can be at what it does - hence more valuable for the user__
+_The more narrow focused an App is, the better it can be at what it does - hence more valuable for the user_
 
 As outlined in a [previous blog post](http://dlinsin.github.com/2011/07/31/Appdate.html): the 
 original purpose of the App, which was notifications about train disruptions, has already been 
 demoted to a second class feature. With the latest update, it disappears into the background 
 and is merely an add-on. Don't get me wrong, it's still there and works as advertised, however 
-the __main focus__ of the App has shifted to displaying the most up to date train arrival times 
+the main focus of the App has shifted to displaying the most up to date train arrival times 
 in Cologne. 
 
 This change has come a long way. We have been thinking about this move since September and running 
 a prototype with various versions for a couple of months. We wanted to get it right and integrate 
-the former main feature as seamlessly as possible with our vision of a __more narrow focus__. 
+the former main feature as seamlessly as possible with our vision of a more narrow focus. 
 
-So far the feedback has mostly been positiv and we are quite happy to have once more __narrowed 
-the focus__ and at the same time increased the value of ["Cologne Train"](http://ffapps.me/bahn) (aka "Bahn Köln").
+So far the feedback has mostly been positiv and we are quite happy to have once more narrowed 
+the focus and at the same time increased the value of ["Cologne Train"](http://ffapps.me/bahn) (aka "Bahn Köln").
