@@ -6,7 +6,8 @@ title: Focus
 
 The latest update of ["Cologne Train"](http://ffapps.me/bahn) (aka "Bahn Köln"), 
 which hit the App Store a [couple of days ago](http://twitter.com/#!/furryfishApps/status/168091577032511488), 
-reflects [furryfishApps](http://furryfishApps.com) continuos effort of narrowing the focus, while increasing the value. 
+reflects [furryfishApps](http://furryfishApps.com) continuos effort of narrowing the focus 
+while at the same time increasing the value for the user. 
 
 We believe that the focus of our App, even though it was already very narrow, was still too 
 wide and needed some redefinition. This is by the way quite opposed to what people tell us 
