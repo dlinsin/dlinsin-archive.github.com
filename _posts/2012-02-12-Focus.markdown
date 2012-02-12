@@ -14,7 +14,7 @@ in their [App Store ratings](http://dlinsin.github.com/2011/11/20/AppStoreRating
 always want more bells & whistles and they all want it for free. So our decision to narrow the 
 focus of "Cologne Train" might seem contradicting. However, we believe it's the right step: 
 
-_The more narrow focused an App is, the better it can be at what it does - hence more valuable for the user_
+_The more narrow focused an App is, the better it can be at what it does - hence more valuable for the user._
 
 As outlined in a [previous blog post](http://dlinsin.github.com/2011/07/31/Appdate.html): the 
 original purpose of the App, which was notifications about train disruptions, has already been 
