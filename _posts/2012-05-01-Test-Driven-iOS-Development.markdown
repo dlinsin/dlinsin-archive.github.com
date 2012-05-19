@@ -26,7 +26,8 @@ setting up OCUnit in Xcode, a couple of interesting testing frameworks and tools
 to testing the view layer with a _UITableView_. 
 
 The most interesting aspects of the chapters about the sample App, was how to design your classes 
-with testing in mind. I've never been a big proponent of a [test-first](http://en.wikipedia.org/wiki/Test-first), 
+with testing in mind. I've [never been](http://dlinsin.blogspot.de/2008/06/nothing-wrong-with-tdd-right.html) 
+a big proponent of a [test-first](http://en.wikipedia.org/wiki/Test-first), 
 however, Graham shows with no doubt, that it has advantages. The most important one, in my 
 opinion, is that it makes you _think_ about the API of your class, _before_ starting to code. 
 
