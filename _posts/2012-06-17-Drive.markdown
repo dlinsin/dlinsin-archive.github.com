@@ -1,0 +1,46 @@
+---
+layout: post
+title: Drive
+---
+
+
+Let me start by stating that this blog post _is not_ about how you can find your __drive__ or 
+motivation, but rather what gives me personally the urge and determination to not be satisfied with a 
+mediocre result of my professional work. I hope it might be somewhat inspiring.
+
+Let's quickly take a look at a scene from the excellent movie ["Indie Game"](http://indiegamethemovie.com). 
+If you haven't seen it, please go to [http://buy.indiegamethemovie.com](http://buy.indiegamethemovie.com) 
+and download it now. It's truly amazing and inspiring for everyone working on any kind of 
+product. 
+
+<iframe src="http://player.vimeo.com/video/44190344" width="500" height="281" frameborder="0">        </iframe>
+
+
+
+
+This is not meant to be in any way insulting to the brilliant creator of [FEZ](http://fezgame.com/) Phil Fish. 
+As a software developer, you've most likely been in this kind of situations - I know I have been and 
+still am  - more than I'd like to be. 
+
+It's part of our daily business to fail and try again. However, for me with each and every single 
+line of code I write, I want to create something I can be proud of. Admittedly, it doesn't 
+work most of the time. However, when my product fails or my code sucks, it motivates me even more 
+to make it better - just like Phil Fish in the clip above. 
+
+Now, not all the projects I've worked on are truly inspiring. It's hardly exciting to work 
+on an internally used enterprise software and really easy to lose your motivation on the way. 
+However, even working on those projects, I tried to do my best and give those users of the software 
+the best experience possible. 
+
+If my software is mediocre or doesn't work as advertised I feel bad - on a personal 
+level - no matter if it's internally used enterprise software or my very own App. I put my 
+very best effort in it and I failed!
+
+On the web it's easy to bash someone else's software, you don't have to tell the person straight 
+into his face. In turn it's easy to discard any kind of criticism. There's nothing like the 
+experience of sitting in a room with your team and reviewing the software with your client or user 
+in person. If your code sucks or something fails because of mistakes you've made, the whole team looks bad. 
+That is one of the biggest motivations to give my very best.
+
+The feeling when someone is using the software I wrote and they are excited or even only 
+satisfied with the work I've done is absolutely stunning. For me, that is my ultimate __drive__!
