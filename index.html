@@ -22,45 +22,18 @@ title: David Linsin
     <li>
       <div class="first"><span>my job</span></div>
       <div class="sep"> &bull; </div>
-      <div class="second">My day job is <strong>managing</strong> the iOS and Android App development at <a href="http://grandcentrix.net">grandcentrix</a> in Cologne.</div>
+      <div class="second">My day job is <strong>leading</strong> the iOS and Android App development at <a href="http://grandcentrix.net">grandcentrix</a> in Cologne.</div>
     </li>
-  </ul>
-  
-  <a name="blog"></a>
-  <h1>// blog</h1>
-  <ul class="posts">
-    
-    {% for post in site.posts limit:3 %}
-    
-    <li>
-      <div class="first"><span>{{ post.date | date: "%d %b %Y" }}</span></div>
-      <div class="sep"> &bull; </div>
-      <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
-    </li>
-    
-    {% endfor %}
-    
-    <li>
-      <div class="first"><span>more posts</span></div>
-      <div class="sep"> &bull; </div>
-      <div class="second"><a href="archive.html">Archive</a></div>
-    </li>
-    
   </ul>
   
   <a name="projects"></a>
   <h1>// projects</h1>
-  <ul class="posts">
+  <ul class="posts"> 
     <li>
-      <div class="first"><span><a href="http://github.com/dlinsin/DLStarRating">DLStarRating</a></span></div>
+      <div class="first"><span><a href="https://github.com/dlinsin/GitHubFileStorage">GitHubFileStorage</a></span></div>
       <div class="sep"> &bull; </div>
-      <div class="second">A UIControl subclass similar to the App Store rating control.</div>
-    </li>
-    <li>
-      <div class="first"><span><a href="http://github.com/dlinsin/DLWebView">DLWebView</a></span></div>
-      <div class="sep"> &bull; </div>
-      <div class="second">A UIViewController subclass used as a drop-in browser component.</div>
-    </li>
+      <div class="second">Mac OSX service using a GitHub wiki to store files.</div>
+    </li>   
     <li>
       <div class="first"><span><a href="https://github.com/dlinsin/Mantis-Issues-Ext">MantisIssuesExt</a></span></div>
       <div class="sep"> &bull; </div>
@@ -76,11 +49,34 @@ title: David Linsin
       <div class="sep"> &bull; </div>
       <div class="second">Safari Extension creating GitHub issues from Polarion.</div>
     </li>
-    <br/>
     <li>
-      <div class="first"><span><a href="https://gist.github.com/dlinsin">gihub:gists</a></span></div>
+      <div class="first"><span><a href="http://github.com/dlinsin/DLStarRating">DLStarRating</a></span></div>
       <div class="sep"> &bull; </div>
-      <div class="second">Code snippets available as gists on github.</div>
+      <div class="second">A UIControl subclass similar to the App Store rating control.</div>
     </li>
+    <li>
+      <div class="first"><span><a href="http://github.com/dlinsin/DLWebView">DLWebView</a></span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second">A UIViewController subclass used as a drop-in browser component.</div>
+    </li>
+  </ul>
+  
+  <a name="blog"></a>
+  <h1>// ramblings</h1>
+  <ul class="posts">
+
+      
+    <li>
+      <div class="first"><span>new stuff</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second"><a href="https://gist.github.com/dlinsin">Gists on GitHub</a></div>
+    </li>
+    
+    <li>
+      <div class="first"><span>old posts</span></div>
+      <div class="sep"> &bull; </div>
+      <div class="second"><a href="archive.html">Archive</a></div>
+    </li>
+    
   </ul>
   
